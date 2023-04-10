@@ -1,0 +1,61 @@
+.benefit {
+  max-width: 380px;
+  min-height: 525px;
+  padding: 235px 48px 48px;
+  box-shadow: 0 0 20px 5px rgba(16, 112, 177, 20%);
+  border-radius: 10px;
+  position: relative;
+
+  &__img {
+    position: absolute;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__text {
+    margin-top: 19px;
+    font-size: 16px;
+    line-height: 26px;
+    opacity: 0.6;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+    color: $blue-color;
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url('./assets/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 28px;
+    }
+  }
+
+  &--orange &__img {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--blue &__img {
+    top: 48px;
+    left: 74px;
+  }
+
+  &--purple &__img {
+    top: 48px;
+    left: 100px;
+  }
+}

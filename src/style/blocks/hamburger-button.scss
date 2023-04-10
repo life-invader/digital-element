@@ -1,0 +1,18 @@
+.hamburger-button {
+  width: 24px;
+  height: 17px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+
+  &__line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background: $hamburger-color;
+  }
+}
