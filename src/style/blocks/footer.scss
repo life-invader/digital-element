@@ -5,7 +5,7 @@
 
   &__container {
     padding: 0;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
     max-width: 901px;
   }
 
@@ -14,10 +14,6 @@
     background-color: $dark-blue-color;
     margin-right: 96px;
     padding-bottom: 70px;
-  }
-
-  &__inner-wrapper {
-    max-width: 1093px;
   }
 
   &__header {
@@ -33,10 +29,15 @@
       background-color: #fff;
       opacity: 0.4;
       height: 1px;
-      width: 1073px;
+      width: 5000px;
       right: 20px;
       bottom: 0;
     }
+  }
+
+  &__header-button:hover {
+    background-color: $dark-blue-color;
+    border: 1px solid $blue-color;
   }
 
   &__header-info {
@@ -106,8 +107,6 @@
 
   &__nav {
     display: grid;
-
-    // grid-template-columns: repeat(auto-fit, 170px);
     grid-template-columns: repeat(2, 170px);
     gap: 71px;
   }
@@ -130,6 +129,11 @@
     color: inherit;
     font-size: 16px;
     line-height: 26px;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__rights {
@@ -181,8 +185,6 @@
 
     &__nav {
       margin-top: 40px;
-
-      // grid-template-columns: repeat(auto-fit, 170px);
     }
 
     &__header {

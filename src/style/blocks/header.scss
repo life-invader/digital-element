@@ -38,6 +38,11 @@
 
   &__button {
     margin-top: 76px;
+
+    &:hover {
+      background-color: #29567e;
+      border-radius: 0;
+    }
   }
 }
 

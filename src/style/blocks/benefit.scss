@@ -40,6 +40,11 @@
       background-repeat: no-repeat;
       background-position: center;
       margin-left: 28px;
+      transition: transform 0.3s;
+    }
+
+    &:hover::after {
+      transform: translateX(-10px);
     }
   }
 
