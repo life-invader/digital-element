@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
   <title>Automation</title>
 </head>
 
@@ -261,12 +262,15 @@
 
       <form class="form">
         <p class="form__field-wrapper">
-          <label class="form__label" for="name">Full Name</label>
+          <label class="form__label" for="name">Full Name <span class="form__field-error form__field-error--hidden">Full
+              name must be at least 2
+              chars length</span></label>
           <input class="form__input" type="text" id="name" name="name" placeholder="Your Name">
         </p>
 
         <p class="form__field-wrapper">
-          <label class="form__label" for="email">Email</label>
+          <label class="form__label" for="email">Email <span class="form__field-error form__field-error--hidden">Invalid
+              Email</span></label>
           <input class="form__input" type="text" id="email" name="email" placeholder="Your Email">
         </p>
 

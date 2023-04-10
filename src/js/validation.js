@@ -6,7 +6,12 @@ const validateEmail = (value) => {
   return result;
 };
 
-export const validateForm = (...params) => [validateName, validateEmail].reduce((acc, func, index) => {
-    const result = func(params[index]);
-    return result;
-  }, false);
+export const validateForm = (name, email, validateError) => {
+  const nameResult = validateName(name);
+  const emailResult = validateEmail(email);
+
+  validateError.name = !nameResult;
+  validateError.email = !emailResult;
+
+  return nameResult && emailResult;
+};
