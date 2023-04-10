@@ -13,6 +13,7 @@ const validateError = {
 };
 
 function openFormModal() {
+  blockScroll();
   modal.classList.remove('modal--close');
   modal.addEventListener('click', (evt) => {
     if (evt.target.closest('.modal__inner')) {
@@ -25,13 +26,16 @@ function openFormModal() {
 
 function closeModal() {
   modal.classList.add('modal--close');
+  blockScroll();
 }
 
 function closeSuccessModal() {
   modalSuccess.classList.add('modal--close');
+  blockScroll();
 }
 
 function openSuccessModal() {
+  blockScroll();
   modalSuccess.classList.remove('modal--close');
   modalSuccessButton.addEventListener('click', closeSuccessModal);
   modalSuccess.addEventListener('click', (evt) => {
@@ -41,6 +45,10 @@ function openSuccessModal() {
 
     closeSuccessModal();
   });
+}
+
+function blockScroll() {
+  document.body.classList.toggle('scroll-block');
 }
 
 const showValidateErrors = (nameElement, emailElement) => {
